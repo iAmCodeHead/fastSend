@@ -1,0 +1,40 @@
+ion-toolbar{
+    --background: #3880ff;
+    --color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+ion-card {
+    height: 90%;
+}
+
+ion-card-title {
+    font-size: 124pt;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #3880ff;
+}
+
+ion-card-subtitle {
+    font-size: 25pt;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #3880ff;
+}
+ion-content{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    // --background: #eef;
+    --color: #3880ff;
+}
+
+ion-tab-bar {
+    --background: #3880ff;
+    --color: #fff;
+}
+
+ion-tab-button:active {
+    --color: #eef;
+}

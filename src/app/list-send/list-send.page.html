@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs"></ion-back-button>
+      </ion-buttons>
+    <ion-title class="ion-text-center">Send SMS to {{listName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #form="ngForm" (ngSubmit)='sendSms(form)'>
+      <ion-grid class="ion-padding">
+          <!-- <ion-card padding> -->
+            <ion-card class="ion-padding ion-text-center">
+              <ion-card-title>{{listName}}</ion-card-title>
+              <ion-card-subtitle >{{ recipients }}<br/></ion-card-subtitle>
+            </ion-card>
+            <ion-item>
+              <ion-label position="floating">Message</ion-label>
+              <ion-textarea name="msg" ngModel required rows="7" placeholder="Compose your message here..."></ion-textarea>
+            </ion-item>
+          <!-- </ion-card> -->
+            <ion-button expand="block" size="default" type="submit" [disabled]="form.invalid" expand="block">
+              <ion-icon slot="start" name="paper-plane"></ion-icon>
+              Send SMS
+            </ion-button>
+          </ion-grid>
+  </form>
+</ion-content>

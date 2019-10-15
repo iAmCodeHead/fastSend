@@ -1,0 +1,48 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      FastSend...
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content class="ion-padding">
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <ion-grid>
+      <ion-row color="primary" class="ion-justify-content-center">
+        <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div class="ion-text-center">
+            <h3>Login to FastSend</h3>
+          </div>
+          <div >
+            <ion-item>
+              <ion-label position="floating">Phone Number</ion-label>
+              <ion-input name="mobile_no" type="tel" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input name="password" type="password" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <br/>
+          <div >
+            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">LOG IN</ion-button>
+          </div>
+          <br/>
+           <div id="sign-up" class="ion-text-center">
+      Don't have an account?
+
+        <ion-button size="large" href="/register" expand="block">SIGN UP HERE</ion-button>
+
+        <!-- <ion-button size="large" (click)="showInterstitialAds()" expand="block">Interstitial Ads</ion-button> -->
+        <!-- <ion-button size="large" (click)="showAdMobFreeReward()" expand="block">Add Reward</ion-button> -->
+      </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+<!-- <ion-footer>
+  <div text-center>
+    <small>CSC 300L CED PROJECT (GROUP II)</small>
+  </div>
+</ion-footer> -->

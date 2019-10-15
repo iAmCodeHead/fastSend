@@ -1,5 +1,7 @@
 {
   "name": "fastSend",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

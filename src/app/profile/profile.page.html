@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"><small>Edit your profile</small></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+      <form #form="ngForm" (ngSubmit)='saveProfile(form)'>
+        <ion-grid>
+            <ion-item>
+              <ion-label position="floating">Phone Number</ion-label>
+              <ion-input name="mobile_no" type="tel" ngModel required placeholder="Your mobile number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Send SMS as</ion-label>
+              <ion-input name="sender_name" type="text" ngModel required placeholder="e.g Tom"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input name="pass" type="password" ngModel required placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Confirm Password</ion-label>
+              <ion-input name="cpass" type="password" ngModel required placeholder="Confirm Password"></ion-input>
+            </ion-item>
+            <ion-button expand="block" size="default" type="submit" [disabled]="form.invalid" expand="block">
+              <ion-icon slot="start" name="save"></ion-icon>
+              Save Changes
+            </ion-button>
+        </ion-grid>
+      </form>
+</ion-content>

@@ -1,0 +1,39 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <!-- <ion-img src="/assets/texting.svg"></ion-img> -->
+    <ion-card-header>
+      <ion-card-subtitle>Hi {{studentName}}!</ion-card-subtitle>
+      <ion-card-title>Welcome to FastSend</ion-card-title>
+      <ion-card-subtitle>Notify your {{studentDept}} {{studentLevel}} peers of improptu happenings in school</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <form #form="ngForm" (ngSubmit)='sendSms(form)'>
+      <ion-grid>
+          <ion-card>
+            <ion-item>
+              <ion-label position="floating">Message</ion-label>
+              <ion-textarea name="msg" ngModel required rows="7" placeholder="Enter your message here..."></ion-textarea>
+            </ion-item>
+          </ion-card>
+            <ion-button expand="block" size="default" type="submit" [disabled]="form.invalid" expand="block">
+              <ion-icon slot="start" name="send"></ion-icon>
+              Blast Message
+            </ion-button>
+          </ion-grid>
+  </form>
+  <ion-button expand="block" size="default" type="submit" (click)="logout()" expand="block">
+      <ion-icon slot="start" name="logout"></ion-icon>
+      Log out
+    </ion-button>
+</ion-content>
+<!-- <ion-footer>
+  <div text-center>
+    <small>CSC 300L CED PROJECT (GROUP II)</small>
+  </div>
+</ion-footer> -->

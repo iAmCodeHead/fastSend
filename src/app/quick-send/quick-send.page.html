@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"><small>Send a Quick SMS</small></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #form="ngForm" (ngSubmit)='sendSms(form)'>
+      <ion-grid class="ion-padding">
+          <!-- <ion-card padding> -->
+            <ion-item style="margin-bottom:5%;">
+              <ion-label position="floating">Phone Number</ion-label>
+              <ion-input name="mobile_no" type="tel" ngModel required placeholder="Recipient's mobile number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Message</ion-label>
+              <ion-textarea name="msg" ngModel required rows="7" placeholder="Compose your message here..."></ion-textarea>
+            </ion-item>
+          <!-- </ion-card> -->
+            <ion-button expand="block" size="default" type="submit" [disabled]="form.invalid" expand="block">
+              <ion-icon slot="start" name="paper-plane"></ion-icon>
+              Send SMS
+            </ion-button>
+          </ion-grid>
+  </form>
+</ion-content>

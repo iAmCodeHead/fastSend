@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"><small>Recipient list</small></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card (click)="presentActionSheet(each)" class="ion-text-center welcome-card" *ngFor='let each of recipientList'>
+    <ion-card-title>{{each.recipientList_name}}</ion-card-title>
+    <ion-card-subtitle>{{each.recipients.length}} recipient(s)</ion-card-subtitle>
+  </ion-card>
+  </ion-content>

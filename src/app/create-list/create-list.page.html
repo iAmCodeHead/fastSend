@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"><small>Create a New Recipient list</small></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #form="ngForm" (ngSubmit)='addRecipient(form)'>
+      <ion-grid class="ion-padding">
+        <ion-card class="ion-text-center welcome-card">
+          <ion-card-title *ngFor='let one of titleList'>{{ one | uppercase }}</ion-card-title>
+          <ion-card-subtitle>
+              <ng-container *ngFor="let each of fieldList">
+                  {{ each }}<br/>
+              </ng-container>
+          </ion-card-subtitle>
+        </ion-card>
+        <ion-item style="margin-bottom:5%;">
+            <ion-item *ngIf='!titleChecker'>
+                <ion-label position="floating">List name</ion-label>
+                <ion-input name="list_name" type="text" ngModel required placeholder="e.g Family"></ion-input>
+            </ion-item>
+        </ion-item>
+        <ion-item style="margin-bottom:5%;">
+          <ion-label position="floating">Phone Number</ion-label>
+          <ion-input name="mobile_no" minlength='11' maxlength='11' type="tel" ngModel required placeholder="Recipient's mobile number"></ion-input>
+        </ion-item>
+        <ion-button expand="block" size="default" type="submit" [disabled]="form.invalid" expand="block">
+            <ion-icon slot="start" name="save"></ion-icon>
+            Save
+          </ion-button>
+      </ion-grid>
+      <ion-fab vertical="center" horizontal="end" slot="fixed">
+          <ion-fab-button (click)='addField(form)'>
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+          <!-- <ion-fab-list side="start">
+            <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+          </ion-fab-list> -->
+        </ion-fab>
+    </form>
+</ion-content>

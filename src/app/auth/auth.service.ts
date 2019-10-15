@@ -20,21 +20,8 @@ import { LoadingController } from '@ionic/angular';
 })
 export class AuthService {
 
-
-
-
-
-    //Reward Video Ad's Configurations
-  RewardVideoConfig: AdMobFreeRewardVideoConfig = {
-    isTesting: true, // Remove in production
-    autoShow: true,//,
-    id: "ca-app-pub-3380705355111875/9268678299",
-  };
-
-
-
-  // AUTH_SERVER_ADDRESS  =  'https://boiling-springs-11927.herokuapp.com';
-  AUTH_SERVER_ADDRESS  =  'http://localhost:3000';
+  AUTH_SERVER_ADDRESS  =  'https://fastsend.herokuapp.com';
+  // AUTH_SERVER_ADDRESS  =  'http://localhost:3000';
   authSubject  =  new  BehaviorSubject(false);
   loggedIn: boolean;
   userData: any;
